@@ -1,0 +1,7 @@
+# Local submission packages
+*-final-submission.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.tmp

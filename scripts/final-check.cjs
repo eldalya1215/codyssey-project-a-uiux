@@ -5,6 +5,7 @@ const { spawnSync } = require('child_process');
 const root = path.resolve(__dirname, '..');
 const required = [
   'README.md',
+  'SUBMISSION.md',
   'AGENTS.md',
   'assets/screens/01-today-workout.png',
   'assets/screens/02-workout-progress.png',
