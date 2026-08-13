@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, '..');
 const required = [
   'README.md',
   'SUBMISSION.md',
+  'index.html',
   'AGENTS.md',
   'assets/screens/01-today-workout.png',
   'assets/screens/02-workout-progress.png',
@@ -13,8 +14,10 @@ const required = [
   'docs/design-system.md',
   'docs/figma-handoff.md',
   'docs/final-approval.md',
+  'docs/mission-checklist.md',
   'docs/references.md',
   'docs/submission-note.md',
+  'docs/usability-test.md',
   'docs/work-log.md',
   'docs/prototype-guide.md',
   'prototype/index.html',

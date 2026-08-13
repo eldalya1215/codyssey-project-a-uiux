@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="50대 여성을 위한 AI 운동 코칭 앱 하루 5분, 웃는 몸 UI/UX 프로젝트">
+  <title>하루 5분, 웃는 몸 — A1-2 최종 제출</title>
+  <style>
+    :root { font-family: Arial, "Noto Sans KR", sans-serif; color: #24313d; background: #fff7ef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header, section, footer { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header { padding: 72px 0 48px; }
+    h1 { margin: 0 0 16px; font-size: clamp(36px, 7vw, 72px); line-height: 1.08; }
+    h2 { margin-top: 0; font-size: 28px; }
+    p { line-height: 1.7; }
+    .eyebrow { color: #39745f; font-weight: 700; }
+    .lead { max-width: 720px; font-size: 20px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; min-height: 52px; padding: 14px 22px; border-radius: 14px; background: #f45f3c; color: white; text-decoration: none; font-weight: 700; }
+    .button.secondary { background: #24313d; }
+    section { padding: 44px 0; }
+    .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    figure { margin: 0; }
+    figure img { display: block; width: 100%; border-radius: 24px; box-shadow: 0 12px 30px rgb(36 49 61 / 18%); }
+    figcaption { padding-top: 12px; font-weight: 700; text-align: center; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { padding: 24px; border-radius: 20px; background: white; box-shadow: 0 6px 18px rgb(36 49 61 / 8%); }
+    .card strong { display: block; margin-bottom: 8px; color: #39745f; font-size: 20px; }
+    footer { padding: 48px 0 72px; border-top: 1px solid #eadfd4; }
+    footer a { color: #24313d; }
+    @media (max-width: 760px) { .screens, .facts { grid-template-columns: 1fr; } header { padding-top: 44px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">CODYSSEY PROJECT A · A1-2</p>
+    <h1>하루 5분,<br>웃는 몸</h1>
+    <p class="lead">혼자 운동을 지속하기 어려운 50대 여성이 오늘 해야 할 저강도 운동 하나를 안전하게 시작하고 작은 성취를 이어가도록 돕는 AI 운동 코칭 앱 UI/UX 시안입니다.</p>
+    <nav class="actions" aria-label="주요 제출 링크">
+      <a class="button" href="prototype/">프로토타입 실행</a>
+      <a class="button secondary" href="https://github.com/eldalya1215/codyssey-project-a-uiux">GitHub 산출물 보기</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="screens-title">
+      <h2 id="screens-title">핵심 화면</h2>
+      <div class="screens">
+        <figure><img src="assets/screens/01-today-workout.png" alt="오늘의 5분 무릎 보호 운동 추천 화면"><figcaption>1. 오늘의 운동</figcaption></figure>
+        <figure><img src="assets/screens/02-workout-progress.png" alt="운동 동작과 진행률 및 안전 안내 화면"><figcaption>2. 운동 진행</figcaption></figure>
+        <figure><img src="assets/screens/03-completion-reward.png" alt="배지와 7일 연속 기록이 표시된 완료 화면"><figcaption>3. 완료 및 보상</figcaption></figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="value-title">
+      <h2 id="value-title">설계 핵심</h2>
+      <div class="facts">
+        <div class="card"><strong>결정 부담 최소화</strong>오늘 수행할 운동 하나만 크게 제안해 시작 장벽을 낮췄습니다.</div>
+        <div class="card"><strong>안전 우선</strong>무릎 부담 수준과 통증 발생 시 중단 안내를 핵심 정보로 배치했습니다.</div>
+        <div class="card"><strong>작은 성공 강화</strong>5분 완료, 배지와 연속 기록으로 지속 동기를 설계했습니다.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="README.md">전체 프로젝트 문서</a> · <a href="SUBMISSION.md">제출 요약</a> · <a href="docs/work-log.md">AI 작업 로그</a></p>
+  </footer>
+</body>
+</html>

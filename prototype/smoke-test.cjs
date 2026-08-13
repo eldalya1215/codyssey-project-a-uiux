@@ -5,6 +5,17 @@ const path = require('path');
 (async () => {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 430, height: 764 } });
+  const landingUrl = pathToFileURL(path.join(__dirname, '..', 'index.html')).href;
+  await page.goto(landingUrl);
+  if (await page.getByRole('heading', { name: '하루 5분, 웃는 몸' }).count() !== 1) {
+    throw new Error('제출 허브 제목 확인 실패');
+  }
+  const landingBrokenImages = await page.locator('img').evaluateAll((images) =>
+    images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.src));
+  if (landingBrokenImages.length) throw new Error(`제출 허브 이미지 로딩 실패: ${landingBrokenImages.join(', ')}`);
+  await page.getByRole('link', { name: '프로토타입 실행' }).click();
+  await page.waitForURL(/prototype/);
+
   await page.goto(pathToFileURL(path.join(__dirname, 'index.html')).href);
 
   const brokenImages = await page.locator('img').evaluateAll((images) =>

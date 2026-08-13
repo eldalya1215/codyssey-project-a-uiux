@@ -4,6 +4,8 @@
 
 > 평가용 요약: [`SUBMISSION.md`](SUBMISSION.md)에서 산출물과 빠른 검토 순서를 한눈에 확인할 수 있습니다.
 
+> 공개 제출 허브: https://eldalya1215.github.io/codyssey-project-a-uiux/
+
 Codyssey **[Project A] AI 기반 UI/UX 디자인 시안 제작** 미션을 위한 프로젝트입니다.
 기존 저장소의 “50대 여성이 혼자서도 운동을 꾸준히 할 수 있도록 돕는 AI 운동 코칭 앱” 아이디어를 UI/UX 시안으로 구체화합니다.
 
@@ -160,6 +162,8 @@ Figma 후가공은 아직 필요합니다.
 정리했습니다.
 Figma 제작 좌표와 연결값은 [`docs/figma-handoff.md`](docs/figma-handoff.md), 제출용
 설명문은 [`docs/submission-note.md`](docs/submission-note.md)에 준비했습니다.
+요구사항 대응표는 [`docs/mission-checklist.md`](docs/mission-checklist.md), 사용성 검증
+시나리오는 [`docs/usability-test.md`](docs/usability-test.md)에서 확인할 수 있습니다.
 
 ## 9. 프로토타입 흐름
 
