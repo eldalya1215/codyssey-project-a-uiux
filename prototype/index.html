@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>하루 5분, 웃는 몸 — 프로토타입</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, "Noto Sans KR", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; background: #24313d; }
+    main { width: min(100vw, 430px); position: relative; background: #fff7ef; overflow: hidden; box-shadow: 0 0 40px rgb(0 0 0 / 24%); }
+    img { width: 100%; height: auto; display: block; user-select: none; -webkit-user-drag: none; }
+    button { position: absolute; border: 0; background: transparent; cursor: pointer; }
+    button:focus-visible { outline: 4px solid #24313d; outline-offset: -4px; border-radius: 16px; }
+    .primary { left: 4.5%; right: 4.5%; bottom: 2.2%; height: 10.2%; }
+    .previous { left: 5%; bottom: 8%; width: 27%; height: 8%; }
+    .pause { left: 32%; bottom: 8%; width: 36%; height: 8%; }
+    .next { right: 5%; bottom: 8%; width: 27%; height: 8%; }
+    .screen[hidden] { display: none; }
+    .hint { position: fixed; z-index: 2; left: 50%; bottom: 10px; transform: translateX(-50%); margin: 0; padding: 7px 12px; border-radius: 999px; color: #24313d; background: rgb(255 247 239 / 94%); font-size: 13px; white-space: nowrap; box-shadow: 0 2px 12px rgb(0 0 0 / 20%); pointer-events: none; transition: opacity .25s ease; }
+    .hint.is-hidden { opacity: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    @media (prefers-reduced-motion: reduce) { .hint { transition: none; } }
+  </style>
+</head>
+<body>
+  <main aria-label="하루 5분, 웃는 몸 앱 프로토타입">
+    <section class="screen" data-screen="today">
+      <img src="../assets/screens/01-today-workout.png" alt="오늘의 추천 운동: 의자에서 무릎 펴기, 5분, 무릎 부담 낮음">
+      <button class="primary" type="button" data-go="progress" aria-label="5분 운동 시작"></button>
+    </section>
+    <section class="screen" data-screen="progress" hidden>
+      <img src="../assets/screens/02-workout-progress.png" alt="운동 진행 화면: 5개 동작 중 2번째, 3분 20초 남음">
+      <button class="previous" type="button" data-go="today" aria-label="이전 화면"></button>
+      <button class="pause" type="button" data-action="pause" aria-label="잠시 쉬기" aria-pressed="false"></button>
+      <button class="next" type="button" data-go="complete" aria-label="다음 동작, 운동 완료"></button>
+    </section>
+    <section class="screen" data-screen="complete" hidden>
+      <img src="../assets/screens/03-completion-reward.png" alt="오늘 운동 완료, 꾸준한 첫걸음 배지와 7일 연속 달성">
+      <button class="primary" type="button" data-go="today" aria-label="내일 운동 확인"></button>
+    </section>
+  </main>
+  <p class="hint" aria-hidden="true">화면 속 주요 버튼을 눌러 이동하세요</p>
+  <p class="sr-only" role="status" aria-live="polite" id="status"></p>
+  <script>
+    const screens = [...document.querySelectorAll('[data-screen]')];
+    const names = new Set(screens.map((screen) => screen.dataset.screen));
+    const labels = { today: '오늘의 운동', progress: '운동 진행', complete: '운동 완료' };
+    const status = document.querySelector('#status');
+    const hint = document.querySelector('.hint');
+
+    function show(name, updateHistory = true) {
+      if (!names.has(name)) name = 'today';
+      screens.forEach((screen) => { screen.hidden = screen.dataset.screen !== name; });
+      if (updateHistory && location.hash !== `#${name}`) history.pushState({ screen: name }, '', `#${name}`);
+      document.title = `${labels[name]} — 하루 5분, 웃는 몸`;
+      status.textContent = `${labels[name]} 화면으로 이동했습니다.`;
+      document.querySelector('[data-screen]:not([hidden]) button')?.focus({ preventScroll: true });
+    }
+    document.addEventListener('click', (event) => {
+      const target = event.target.closest('[data-go]');
+      if (target) show(target.dataset.go);
+      const pause = event.target.closest('[data-action="pause"]');
+      if (pause) {
+        const isPaused = pause.getAttribute('aria-pressed') !== 'true';
+        pause.setAttribute('aria-pressed', String(isPaused));
+        pause.setAttribute('aria-label', isPaused ? '운동 계속하기' : '잠시 쉬기');
+        status.textContent = isPaused ? '운동을 잠시 멈췄습니다.' : '운동을 다시 시작합니다.';
+      }
+    });
+    addEventListener('popstate', () => show(location.hash.slice(1), false));
+    addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && location.hash !== '#today') history.back();
+    });
+    const initial = location.hash.slice(1);
+    show(names.has(initial) ? initial : 'today', false);
+    setTimeout(() => hint.classList.add('is-hidden'), 3500);
+  </script>
+</body>
+</html>

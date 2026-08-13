@@ -1,5 +1,7 @@
 # 하루 5분, 웃는 몸 — AI 기반 UI/UX 디자인 시안
 
+> 승인 상태: 2026-08-13 로컬 산출물 최종 승인. Figma 프로젝트와 공유 링크는 별도 등록 필요.
+
 Codyssey **[Project A] AI 기반 UI/UX 디자인 시안 제작** 미션을 위한 프로젝트입니다.
 기존 저장소의 “50대 여성이 혼자서도 운동을 꾸준히 할 수 있도록 돕는 AI 운동 코칭 앱” 아이디어를 UI/UX 시안으로 구체화합니다.
 
@@ -148,6 +150,14 @@ medical claims, aggressive fitness imagery and excessive gamification.
 정적 이미지 생성은 완료했지만, 편집 가능한 실제 텍스트와 컴포넌트로 교체하는
 Figma 후가공은 아직 필요합니다.
 
+브라우저에서 화면 흐름을 검증할 수 있는 로컬 클릭형 프로토타입은
+[`prototype/index.html`](prototype/index.html)에 구현했습니다. 실행 및 Figma 이전
+절차는 [`docs/prototype-guide.md`](docs/prototype-guide.md)를 참고합니다.
+최종 승인 상태와 제출 직전 점검은 [`docs/final-approval.md`](docs/final-approval.md)에
+정리했습니다.
+Figma 제작 좌표와 연결값은 [`docs/figma-handoff.md`](docs/figma-handoff.md), 제출용
+설명문은 [`docs/submission-note.md`](docs/submission-note.md)에 준비했습니다.
+
 ## 9. 프로토타입 흐름
 
 ```text
@@ -173,6 +183,7 @@ Figma에서는 다음 영역을 Hotspot으로 연결할 예정입니다.
 - [x] 초안 → 수정 → 최종 프롬프트 작업 로그
 - [x] 프롬프트별 변경 이유와 개선점
 - [x] 화면 구성과 사용자 흐름 정의
+- [x] 로컬 클릭형 프로토타입 구현 및 자동 화면 전환 검증 완료
 - [x] 디자인 스타일 가이드
 - [x] 이미지 속 주요 한글과 인체 표현 1차 점검
 - [ ] Figma에서 텍스트·아이콘·컴포넌트 정밀 후가공
@@ -199,7 +210,7 @@ Figma에서는 다음 영역을 Hotspot으로 연결할 예정입니다.
 ```
 
 저장소 구조와 문서 규칙은 `AGENTS.md`에 기록합니다.
-세 UI 이미지는 생성 완료했으며 Figma 프로토타입과 공유 링크는 제작 후 추가합니다.
+세 UI 이미지와 로컬 프로토타입은 완료했으며 Figma 프로토타입과 공유 링크는 제작 후 추가합니다.
 
 ## 12. 저작권 및 윤리
 
