@@ -22,5 +22,5 @@
 ## 제출 링크
 
 - 저장소: https://github.com/eldalya1215/codyssey-project-a-uiux
-- 실행 프로토타입: 저장소를 내려받은 뒤 `prototype/index.html` 실행
+- 실행 프로토타입: https://eldalya1215.github.io/codyssey-project-a-uiux/prototype/
 - Figma 프로토타입: 미등록 — 제출 전 실제 공유 URL 필요

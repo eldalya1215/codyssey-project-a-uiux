@@ -1,6 +1,6 @@
 # 하루 5분, 웃는 몸 — AI 기반 UI/UX 디자인 시안
 
-> 승인 상태: 2026-08-13 로컬 산출물 최종 승인. Figma 프로젝트와 공유 링크는 별도 등록 필요.
+> 승인 상태: 2026-08-13 로컬 산출물 및 공개 웹 프로토타입 승인. Figma 프로젝트와 공유 링크는 별도 등록 필요.
 
 > 평가용 요약: [`SUBMISSION.md`](SUBMISSION.md)에서 산출물과 빠른 검토 순서를 한눈에 확인할 수 있습니다.
 
@@ -155,6 +155,7 @@ Figma 후가공은 아직 필요합니다.
 브라우저에서 화면 흐름을 검증할 수 있는 로컬 클릭형 프로토타입은
 [`prototype/index.html`](prototype/index.html)에 구현했습니다. 실행 및 Figma 이전
 절차는 [`docs/prototype-guide.md`](docs/prototype-guide.md)를 참고합니다.
+설치 없이 실행할 수 있는 [공개 웹 프로토타입](https://eldalya1215.github.io/codyssey-project-a-uiux/prototype/)도 제공합니다.
 최종 승인 상태와 제출 직전 점검은 [`docs/final-approval.md`](docs/final-approval.md)에
 정리했습니다.
 Figma 제작 좌표와 연결값은 [`docs/figma-handoff.md`](docs/figma-handoff.md), 제출용
