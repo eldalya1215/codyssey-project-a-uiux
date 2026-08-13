@@ -21,5 +21,6 @@
 
 ## 제출 링크
 
-- 저장소: `[저장소 URL 입력]`
-- Figma 프로토타입: `[공유 URL 입력]`
+- 저장소: https://github.com/eldalya1215/codyssey-project-a-uiux
+- 실행 프로토타입: 저장소를 내려받은 뒤 `prototype/index.html` 실행
+- Figma 프로토타입: 미등록 — 제출 전 실제 공유 URL 필요

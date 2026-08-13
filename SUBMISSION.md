@@ -11,6 +11,7 @@
 | 저장소 | https://github.com/eldalya1215/codyssey-project-a-uiux |
 | 승인 커밋 | `f984cff` 이후 보완 커밋 포함 |
 | 로컬 프로토타입 | [`prototype/index.html`](prototype/index.html) |
+| 저장소 공개 범위 | Private — 평가자 초대 또는 Public 전환 필요 |
 | 승인 상태 | 로컬 산출물 승인, Figma 공유 링크 등록 대기 |
 
 ## 최종 산출물
@@ -42,3 +43,12 @@ today → progress → complete → today
 Figma 파일을 과제의 필수 제출 형식으로 요구하는 경우
 [`docs/figma-handoff.md`](docs/figma-handoff.md)에 따라 프로젝트를 만들고 공유 URL을
 README에 등록해야 합니다. 실제 URL이 없는 상태에서 완료로 표시하지 않았습니다.
+
+현재 GitHub 저장소는 Private입니다. 제출 방식에 따라 다음 중 하나가 반드시 필요합니다.
+
+- 저장소를 Public으로 전환
+- 평가자의 GitHub 계정을 Collaborator로 초대
+- `A1-2-final-submission.zip`을 과제 시스템에 직접 업로드
+
+현재 계정 요금제에서는 Private 저장소의 GitHub Pages 생성이 지원되지 않아,
+공개 실행 URL은 저장소 공개 전환 후 다시 설정해야 합니다.
