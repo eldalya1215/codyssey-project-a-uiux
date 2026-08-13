@@ -47,9 +47,12 @@ process.stderr.write(smoke.stderr);
 if (smoke.status !== 0) process.exit(smoke.status || 1);
 
 const readme = fs.readFileSync(path.join(root, 'README.md'), 'utf8');
-const openItems = [...readme.matchAll(/^- \[ \] (.+)$/gm)].map((match) => match[1]);
+const openItems = [...readme.matchAll(/^- \[ \] (?!선택 사항:)(.+)$/gm)].map((match) => match[1]);
+const optionalItems = [...readme.matchAll(/^- \[ \] 선택 사항: (.+)$/gm)].map((match) => match[1]);
 
 console.log(`필수 산출물 ${required.length}개 확인 완료`);
 console.log(`미완료 외부 작업 ${openItems.length}개`);
 openItems.forEach((item) => console.log(`- ${item}`));
+console.log(`선택 확장 작업 ${optionalItems.length}개`);
+optionalItems.forEach((item) => console.log(`- ${item}`));
 console.log(openItems.length ? '결론: 조건부 승인 준비 완료' : '결론: 최종 승인 가능');

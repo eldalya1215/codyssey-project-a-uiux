@@ -14,9 +14,9 @@
 | 출처·도구·윤리 기록 | `docs/references.md`, README 12절 | 완료 |
 | 실행 가능한 결과 공유 | GitHub Pages 제출 허브·프로토타입 | 완료 |
 | 자동 동작 검증 | `prototype/smoke-test.cjs` | 완료 |
-| Figma 원본·공유 링크 | `docs/figma-handoff.md`까지만 준비 | 미완료 |
+| Figma 원본·공유 링크 | 필수 아님, `docs/figma-handoff.md` 제공 | 선택 사항 |
 
 ## 최종 판정 기준
 
-- Figma가 선택 사항이면 현재 공개 저장소, 제출 허브와 프로토타입으로 제출 가능
-- Figma 파일 또는 링크가 필수이면 실제 계정에서 제작·공유한 후 제출 가능
+- 공개 저장소, 제출 허브와 웹 프로토타입으로 최종 제출 가능
+- Figma 파일과 공유 링크는 선택적 확장 항목

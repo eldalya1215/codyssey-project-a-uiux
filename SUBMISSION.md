@@ -13,7 +13,7 @@
 | 승인 커밋 | `f984cff` 이후 보완 커밋 포함 |
 | 로컬 프로토타입 | [`prototype/index.html`](prototype/index.html) |
 | 저장소 공개 범위 | Public |
-| 승인 상태 | 로컬 산출물 승인, Figma 공유 링크 등록 대기 |
+| 승인 상태 | 최종 제출 가능 |
 
 ## 최종 산출물
 
@@ -39,11 +39,10 @@ today → progress → complete → today
 이미지 로딩, 일시정지, 직접 화면 진입, 키보드 이동 통과
 ```
 
-## 제출 전 남은 외부 항목
+## 선택 확장 항목
 
-Figma 파일을 과제의 필수 제출 형식으로 요구하는 경우
-[`docs/figma-handoff.md`](docs/figma-handoff.md)에 따라 프로젝트를 만들고 공유 URL을
-README에 등록해야 합니다. 실제 URL이 없는 상태에서 완료로 표시하지 않았습니다.
+Figma 파일과 공유 링크는 필수 제출물이 아닙니다. 추후 확장할 경우
+[`docs/figma-handoff.md`](docs/figma-handoff.md)의 명세를 사용할 수 있습니다.
 
 GitHub 저장소와 웹 프로토타입은 공개 상태입니다. ZIP 제출이 필요한 과제 시스템에는
 `A1-2-final-submission.zip`을 별도로 업로드합니다.
